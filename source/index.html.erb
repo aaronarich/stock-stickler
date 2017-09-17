@@ -1,11 +1,25 @@
 ---
-title: Welcome to Middleman
+title: Stocks
 ---
-Today's Date: <%= Time.now.strftime("%m/%d/%Y") %>
 
 <div class="center w-100">
 
-  <div class="overflow-auto">
+  <div class="pv3 w-100">
+    <div class="w-50">
+      <h1 class="greeting"></h1>
+      <!-- <p>Today's Date: <span class="date"></span></p>
+      <p>Last Refreshed: <span class="time"></span></p> -->
+    </div>
+
+    <div class="w-50">
+      <a class="button" href="/">Refresh</a>
+    </div>
+
+
+  </div>
+
+  <div class="w-100 overflow-auto">
+    <hr/>
     <table class="w-100" cellspacing="0">
       <thead>
         <tr>
@@ -389,4 +403,37 @@ Today's Date: <%= Time.now.strftime("%m/%d/%Y") %>
   </div>
 </div>
 
+<p>Data provided for free by <a href="https://iextrading.com/developer">IEX</a></p>
+
 </div>
+
+<script type="text/javascript">
+  (function($) {
+    var currentTime = new Date();
+      if ( currentTime.getHours() < 12 )
+        {
+          salutation = "Good&nbsp;Morning";
+        }
+      else
+        if ( currentTime.getHours() >= 12 && currentTime.getHours() <= 17 )
+          {
+            salutation = "Good&nbsp;Afternoon";
+          }
+        else
+          if ( currentTime.getHours() > 17 && currentTime.getHours() <= 24 )
+            {
+              salutation = "Good&nbsp;Evening";
+            }
+        else
+          {
+            salutation = "Hello!";
+          }
+    $(".greeting").append(salutation);
+
+    var time = currentTime.getHours() + ":" + currentTime.getMinutes();
+    var date = currentTime.getMonth() + "/" + currentTime.getDate() + "/" + currentTime.getYear();
+
+    // $(".time").append(time);
+    // $(".date").append(date);
+  }(jQuery));
+</script>

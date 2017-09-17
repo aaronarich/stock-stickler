@@ -5,11 +5,26 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="refresh" content="600">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "site" %>
+    <link rel="shortcut icon" href="/images/favicon.ico">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <%= javascript_include_tag "site" %>
+
+    <!-- iPad (Retina) -->
+    <link href="/images/icon-144.png" sizes="144x144" rel="apple-touch-icon-precomposed">
+    <link href="/images/1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="/images/1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
   </head>
   <body>
     <%= yield %>
