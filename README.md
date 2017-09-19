@@ -10,4 +10,4 @@ For lack of a better option, I decided to create this web app as a proof-of-conc
 While this does require me to update and deploy changes to her portfolio manually, it does put the power in my hands to adjust things to her liking. I can then deploy my changes without trying to convince her to go to the App Store and download a new version.
 
 - See it live here [https://stocks.aaronarich.com/](https://stocks.aaronarich.com/)
-- Data provided for free by [IEX Developer Platform[(https://iextrading.com/developer/)
+- Data provided for free by [IEX Developer Platform](https://iextrading.com/developer/)
