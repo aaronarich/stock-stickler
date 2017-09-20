@@ -9,10 +9,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/abb/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".0-0").text(data.symbol);
-      $(".0-1").text(data.companyName);
-      $(".0-2").text('$' + data.latestPrice);
-      $(".0-3").text(data.change);
+      $(".abb-0").text(data.symbol);
+      $(".abb-1").text(data.companyName);
+      $(".abb-2").text('$' + data.latestPrice);
+      $(".abb-3").text(data.change);
   },
 });
 
@@ -22,10 +22,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/adm/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".1-0").text(data.symbol);
-      $(".1-1").text(data.companyName);
-      $(".1-2").text('$' + data.latestPrice);
-      $(".1-3").text(data.change);
+      $(".adm-0").text(data.symbol);
+      $(".adm-1").text(data.companyName);
+      $(".adm-2").text('$' + data.latestPrice);
+      $(".adm-3").text(data.change);
   },
 });
 
@@ -35,10 +35,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/aav/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".2-0").text(data.symbol);
-      $(".2-1").text(data.companyName);
-      $(".2-2").text('$' + data.latestPrice);
-      $(".2-3").text(data.change);
+      $(".aav-0").text(data.symbol);
+      $(".aav-1").text(data.companyName);
+      $(".aav-2").text('$' + data.latestPrice);
+      $(".aav-3").text(data.change);
   },
 });
 
@@ -48,10 +48,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/aa/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".3-0").text(data.symbol);
-      $(".3-1").text(data.companyName);
-      $(".3-2").text('$' + data.latestPrice);
-      $(".3-3").text(data.change);
+      $(".aa-0").text(data.symbol);
+      $(".aa-1").text(data.companyName);
+      $(".aa-2").text('$' + data.latestPrice);
+      $(".aa-3").text(data.change);
   },
 });
 
@@ -61,10 +61,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/apc/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".4-0").text(data.symbol);
-      $(".4-1").text(data.companyName);
-      $(".4-2").text('$' + data.latestPrice);
-      $(".4-3").text(data.change);
+      $(".apc-0").text(data.symbol);
+      $(".apc-1").text(data.companyName);
+      $(".apc-2").text('$' + data.latestPrice);
+      $(".apc-3").text(data.change);
   },
 });
 
@@ -74,10 +74,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/aapl/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".5-0").text(data.symbol);
-      $(".5-1").text(data.companyName);
-      $(".5-2").text('$' + data.latestPrice);
-      $(".5-3").text(data.change);
+      $(".aapl-0").text(data.symbol);
+      $(".aapl-1").text(data.companyName);
+      $(".aapl-2").text('$' + data.latestPrice);
+      $(".aapl-3").text(data.change);
   },
 });
 
@@ -87,23 +87,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/asg/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".21-0").text(data.symbol);
-      $(".21-1").text(data.companyName);
-      $(".21-2").text('$' + data.latestPrice);
-      $(".21-3").text(data.change);
-  },
-});
-
-// $BRK.B
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/brk.b/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".7-0").text(data.symbol);
-      $(".7-1").text(data.companyName);
-      $(".7-2").text('$' + data.latestPrice);
-      $(".7-3").text(data.change);
+      $(".asg-0").text(data.symbol);
+      $(".asg-1").text(data.companyName);
+      $(".asg-2").text('$' + data.latestPrice);
+      $(".asg-3").text(data.change);
   },
 });
 
@@ -113,10 +100,23 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/bpt/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".8-0").text(data.symbol);
-      $(".8-1").text(data.companyName);
-      $(".8-2").text('$' + data.latestPrice);
-      $(".8-3").text(data.change);
+      $(".bpt-0").text(data.symbol);
+      $(".bpt-1").text(data.companyName);
+      $(".bpt-2").text('$' + data.latestPrice);
+      $(".bpt-3").text(data.change);
+  },
+});
+
+// $BRK.B
+$.ajax({
+  type : 'GET',
+  url : 'https://api.iextrading.com/1.0/stock/brk.b/quote',
+  dataType : 'jsonp',
+  success : function(data) {
+      $(".brkb-0").text(data.symbol);
+      $(".brkb-1").text(data.companyName);
+      $(".brkb-2").text('$' + data.latestPrice);
+      $(".brkb-3").text(data.change);
   },
 });
 
@@ -126,10 +126,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/chk/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".9-0").text(data.symbol);
-      $(".9-1").text(data.companyName);
-      $(".9-2").text('$' + data.latestPrice);
-      $(".9-3").text(data.change);
+      $(".chk-0").text(data.symbol);
+      $(".chk-1").text(data.companyName);
+      $(".chk-2").text('$' + data.latestPrice);
+      $(".chk-3").text(data.change);
   },
 });
 
@@ -139,10 +139,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/cmcsa/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".10-0").text(data.symbol);
-      $(".10-1").text(data.companyName);
-      $(".10-2").text('$' + data.latestPrice);
-      $(".10-3").text(data.change);
+      $(".cmcsa-0").text(data.symbol);
+      $(".cmcsa-1").text(data.companyName);
+      $(".cmcsa-2").text('$' + data.latestPrice);
+      $(".cmcsa-3").text(data.change);
   },
 });
 
@@ -152,23 +152,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/czz/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".11-0").text(data.symbol);
-      $(".11-1").text(data.companyName);
-      $(".11-2").text('$' + data.latestPrice);
-      $(".11-3").text(data.change);
-  },
-});
-
-// $DVN
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/dvn/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".12-0").text(data.symbol);
-      $(".12-1").text(data.companyName);
-      $(".12-2").text('$' + data.latestPrice);
-      $(".12-3").text(data.change);
+      $(".czz-0").text(data.symbol);
+      $(".czz-1").text(data.companyName);
+      $(".czz-2").text('$' + data.latestPrice);
+      $(".czz-3").text(data.change);
   },
 });
 
@@ -178,10 +165,23 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/dvmt/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".37-0").text(data.symbol);
-      $(".37-1").text(data.companyName);
-      $(".37-2").text('$' + data.latestPrice);
-      $(".37-3").text(data.change);
+      $(".dvmt-0").text(data.symbol);
+      $(".dvmt-1").text(data.companyName);
+      $(".dvmt-2").text('$' + data.latestPrice);
+      $(".dvmt-3").text(data.change);
+  },
+});
+
+// $DVN
+$.ajax({
+  type : 'GET',
+  url : 'https://api.iextrading.com/1.0/stock/dvn/quote',
+  dataType : 'jsonp',
+  success : function(data) {
+      $(".dvn-0").text(data.symbol);
+      $(".dvn-1").text(data.companyName);
+      $(".dvn-2").text('$' + data.latestPrice);
+      $(".dvn-3").text(data.change);
   },
 });
 
@@ -191,10 +191,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/dxc/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".38-0").text(data.symbol);
-      $(".38-1").text(data.companyName);
-      $(".38-2").text('$' + data.latestPrice);
-      $(".38-3").text(data.change);
+      $(".dxc-0").text(data.symbol);
+      $(".dxc-1").text(data.companyName);
+      $(".dxc-2").text('$' + data.latestPrice);
+      $(".dxc-3").text(data.change);
   },
 });
 
@@ -204,10 +204,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/ftr/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".13-0").text(data.symbol);
-      $(".13-1").text(data.companyName);
-      $(".13-2").text('$' + data.latestPrice);
-      $(".13-3").text(data.change);
+      $(".ftr-0").text(data.symbol);
+      $(".ftr-1").text(data.companyName);
+      $(".ftr-2").text('$' + data.latestPrice);
+      $(".ftr-3").text(data.change);
   },
 });
 
@@ -217,10 +217,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/ge/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".14-0").text(data.symbol);
-      $(".14-1").text(data.companyName);
-      $(".14-2").text('$' + data.latestPrice);
-      $(".14-3").text(data.change);
+      $(".ge-0").text(data.symbol);
+      $(".ge-1").text(data.companyName);
+      $(".ge-2").text('$' + data.latestPrice);
+      $(".ge-3").text(data.change);
   },
 });
 
@@ -230,10 +230,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/gnw/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".15-0").text(data.symbol);
-      $(".15-1").text(data.companyName);
-      $(".15-2").text('$' + data.latestPrice);
-      $(".15-3").text(data.change);
+      $(".gnw-0").text(data.symbol);
+      $(".gnw-1").text(data.companyName);
+      $(".gnw-2").text('$' + data.latestPrice);
+      $(".gnw-3").text(data.change);
   },
 });
 
@@ -243,23 +243,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/hlt/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".16-0").text(data.symbol);
-      $(".16-1").text(data.companyName);
-      $(".16-2").text('$' + data.latestPrice);
-      $(".16-3").text(data.change);
-  },
-});
-
-// $HPQ
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/hpq/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".17-0").text(data.symbol);
-      $(".17-1").text(data.companyName);
-      $(".17-2").text('$' + data.latestPrice);
-      $(".17-3").text(data.change);
+      $(".hlt-0").text(data.symbol);
+      $(".hlt-1").text(data.companyName);
+      $(".hlt-2").text('$' + data.latestPrice);
+      $(".hlt-3").text(data.change);
   },
 });
 
@@ -269,10 +256,23 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/hpe/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".18-0").text(data.symbol);
-      $(".18-1").text(data.companyName);
-      $(".18-2").text('$' + data.latestPrice);
-      $(".18-3").text(data.change);
+      $(".hpe-0").text(data.symbol);
+      $(".hpe-1").text(data.companyName);
+      $(".hpe-2").text('$' + data.latestPrice);
+      $(".hpe-3").text(data.change);
+  },
+});
+
+// $HPQ
+$.ajax({
+  type : 'GET',
+  url : 'https://api.iextrading.com/1.0/stock/hpq/quote',
+  dataType : 'jsonp',
+  success : function(data) {
+      $(".hpq-0").text(data.symbol);
+      $(".hpq-1").text(data.companyName);
+      $(".hpq-2").text('$' + data.latestPrice);
+      $(".hpq-3").text(data.change);
   },
 });
 
@@ -282,10 +282,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/intc/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".19-0").text(data.symbol);
-      $(".19-1").text(data.companyName);
-      $(".19-2").text('$' + data.latestPrice);
-      $(".19-3").text(data.change);
+      $(".intc-0").text(data.symbol);
+      $(".intc-1").text(data.companyName);
+      $(".intc-2").text('$' + data.latestPrice);
+      $(".intc-3").text(data.change);
   },
 });
 
@@ -295,10 +295,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/kgc/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".20-0").text(data.symbol);
-      $(".20-1").text(data.companyName);
-      $(".20-2").text('$' + data.latestPrice);
-      $(".20-3").text(data.change);
+      $(".kgc-0").text(data.symbol);
+      $(".kgc-1").text(data.companyName);
+      $(".kgc-2").text('$' + data.latestPrice);
+      $(".kgc-3").text(data.change);
   },
 });
 
@@ -308,10 +308,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/msft/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".22-0").text(data.symbol);
-      $(".22-1").text(data.companyName);
-      $(".22-2").text('$' + data.latestPrice);
-      $(".22-3").text(data.change);
+      $(".msft-0").text(data.symbol);
+      $(".msft-1").text(data.companyName);
+      $(".msft-2").text('$' + data.latestPrice);
+      $(".msft-3").text(data.change);
   },
 });
 
@@ -321,10 +321,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/nbr/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".23-0").text(data.symbol);
-      $(".23-1").text(data.companyName);
-      $(".23-2").text('$' + data.latestPrice);
-      $(".23-3").text(data.change);
+      $(".nbr-0").text(data.symbol);
+      $(".nbr-1").text(data.companyName);
+      $(".nbr-2").text('$' + data.latestPrice);
+      $(".nbr-3").text(data.change);
   },
 });
 
@@ -334,10 +334,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/nov/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".24-0").text(data.symbol);
-      $(".24-1").text(data.companyName);
-      $(".24-2").text('$' + data.latestPrice);
-      $(".24-3").text(data.change);
+      $(".nov-0").text(data.symbol);
+      $(".nov-1").text(data.companyName);
+      $(".nov-2").text('$' + data.latestPrice);
+      $(".nov-3").text(data.change);
   },
 });
 
@@ -347,10 +347,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/nok/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".25-0").text(data.symbol);
-      $(".25-1").text(data.companyName);
-      $(".25-2").text('$' + data.latestPrice);
-      $(".25-3").text(data.change);
+      $(".nok-0").text(data.symbol);
+      $(".nok-1").text(data.companyName);
+      $(".nok-2").text('$' + data.latestPrice);
+      $(".nok-3").text(data.change);
   },
 });
 
@@ -360,10 +360,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/pba/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".26-0").text(data.symbol);
-      $(".26-1").text(data.companyName);
-      $(".26-2").text('$' + data.latestPrice);
-      $(".26-3").text(data.change);
+      $(".pba-0").text(data.symbol);
+      $(".pba-1").text(data.companyName);
+      $(".pba-2").text('$' + data.latestPrice);
+      $(".pba-3").text(data.change);
   },
 });
 
@@ -373,23 +373,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/pfe/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".27-0").text(data.symbol);
-      $(".27-1").text(data.companyName);
-      $(".27-2").text('$' + data.latestPrice);
-      $(".27-3").text(data.change);
-  },
-});
-
-// $SDT
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/sdt/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".28-0").text(data.symbol);
-      $(".28-1").text(data.companyName);
-      $(".28-2").text('$' + data.latestPrice);
-      $(".28-3").text(data.change);
+      $(".pfe-0").text(data.symbol);
+      $(".pfe-1").text(data.companyName);
+      $(".pfe-2").text('$' + data.latestPrice);
+      $(".pfe-3").text(data.change);
   },
 });
 
@@ -399,10 +386,23 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/sdr/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".29-0").text(data.symbol);
-      $(".29-1").text(data.companyName);
-      $(".29-2").text('$' + data.latestPrice);
-      $(".29-3").text(data.change);
+      $(".sdr-0").text(data.symbol);
+      $(".sdr-1").text(data.companyName);
+      $(".sdr-2").text('$' + data.latestPrice);
+      $(".sdr-3").text(data.change);
+  },
+});
+
+// $SDT
+$.ajax({
+  type : 'GET',
+  url : 'https://api.iextrading.com/1.0/stock/sdt/quote',
+  dataType : 'jsonp',
+  success : function(data) {
+      $(".sdt-0").text(data.symbol);
+      $(".sdt-1").text(data.companyName);
+      $(".sdt-2").text('$' + data.latestPrice);
+      $(".sdt-3").text(data.change);
   },
 });
 
@@ -412,10 +412,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/per/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".30-0").text(data.symbol);
-      $(".30-1").text(data.companyName);
-      $(".30-2").text('$' + data.latestPrice);
-      $(".30-3").text(data.change);
+      $(".per-0").text(data.symbol);
+      $(".per-1").text(data.companyName);
+      $(".per-2").text('$' + data.latestPrice);
+      $(".per-3").text(data.change);
   },
 });
 
@@ -425,23 +425,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/snap/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".40-0").text(data.symbol);
-      $(".40-1").text(data.companyName);
-      $(".40-2").text('$' + data.latestPrice);
-      $(".40-3").text(data.change);
-  },
-});
-
-// $TXN
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/txn/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".31-0").text(data.symbol);
-      $(".31-1").text(data.companyName);
-      $(".31-2").text('$' + data.latestPrice);
-      $(".31-3").text(data.change);
+      $(".snap-0").text(data.symbol);
+      $(".snap-1").text(data.companyName);
+      $(".snap-2").text('$' + data.latestPrice);
+      $(".snap-3").text(data.change);
   },
 });
 
@@ -451,10 +438,23 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/twtr/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".33-0").text(data.symbol);
-      $(".33-1").text(data.companyName);
-      $(".33-2").text('$' + data.latestPrice);
-      $(".33-3").text(data.change);
+      $(".twtr-0").text(data.symbol);
+      $(".twtr-1").text(data.companyName);
+      $(".twtr-2").text('$' + data.latestPrice);
+      $(".twtr-3").text(data.change);
+  },
+});
+
+// $TXN
+$.ajax({
+  type : 'GET',
+  url : 'https://api.iextrading.com/1.0/stock/txn/quote',
+  dataType : 'jsonp',
+  success : function(data) {
+      $(".txn-0").text(data.symbol);
+      $(".txn-1").text(data.companyName);
+      $(".txn-2").text('$' + data.latestPrice);
+      $(".txn-3").text(data.change);
   },
 });
 
@@ -464,23 +464,10 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/vz/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".34-0").text(data.symbol);
-      $(".34-1").text(data.companyName);
-      $(".34-2").text('$' + data.latestPrice);
-      $(".34-3").text(data.change);
-  },
-});
-
-// $WMT
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/wmt/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".41-0").text(data.symbol);
-      $(".41-1").text(data.companyName);
-      $(".41-2").text('$' + data.latestPrice);
-      $(".41-3").text(data.change);
+      $(".vz-0").text(data.symbol);
+      $(".vz-1").text(data.companyName);
+      $(".vz-2").text('$' + data.latestPrice);
+      $(".vz-3").text(data.change);
   },
 });
 
@@ -490,10 +477,23 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/win/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".35-0").text(data.symbol);
-      $(".35-1").text(data.companyName);
-      $(".35-2").text('$' + data.latestPrice);
-      $(".35-3").text(data.change);
+      $(".win-0").text(data.symbol);
+      $(".win-1").text(data.companyName);
+      $(".win-2").text('$' + data.latestPrice);
+      $(".win-3").text(data.change);
+  },
+});
+
+// $WMT
+$.ajax({
+  type : 'GET',
+  url : 'https://api.iextrading.com/1.0/stock/wmt/quote',
+  dataType : 'jsonp',
+  success : function(data) {
+      $(".wmt-0").text(data.symbol);
+      $(".wmt-1").text(data.companyName);
+      $(".wmt-2").text('$' + data.latestPrice);
+      $(".wmt-3").text(data.change);
   },
 });
 
@@ -503,9 +503,9 @@ $.ajax({
   url : 'https://api.iextrading.com/1.0/stock/znga/quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".36-0").text(data.symbol);
-      $(".36-1").text(data.companyName);
-      $(".36-2").text('$' + data.latestPrice);
-      $(".36-3").text(data.change);
+      $(".znga-0").text(data.symbol);
+      $(".znga-1").text(data.companyName);
+      $(".znga-2").text('$' + data.latestPrice);
+      $(".znga-3").text(data.change);
   },
 });
