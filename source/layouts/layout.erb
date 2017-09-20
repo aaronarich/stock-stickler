@@ -14,8 +14,11 @@
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "site" %>
     <link rel="shortcut icon" href="/images/favicon.ico">
+    <script data-pace-options='{ "ajax": true }' src="/javascripts/pace.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <%= javascript_include_tag "site" %>
+
+    <link href="/pace/themes/pace-theme-barber-shop.css" rel="stylesheet" />
 
     <!-- iPad (Retina) -->
     <link href="/images/icon-144.png" sizes="144x144" rel="apple-touch-icon-precomposed">
