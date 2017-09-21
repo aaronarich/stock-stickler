@@ -86,19 +86,6 @@ $.ajax({
   },
 });
 
-// $ASG
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/asg/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".asg-0").text(data.symbol);
-      $(".asg-1").text(data.companyName);
-      $(".asg-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".asg-3").text(priceRound.round(data.change, 1));
-  },
-});
-
 // $BPT
 $.ajax({
   type : 'GET',
@@ -460,6 +447,19 @@ $.ajax({
       $(".txn-1").text(data.companyName);
       $(".txn-2").text('$' + priceRound.round(data.latestPrice, 1));
       $(".txn-3").text(priceRound.round(data.change, 1));
+  },
+});
+
+// $USA
+$.ajax({
+  type : 'GET',
+  url : 'https://api.iextrading.com/1.0/stock/usa/quote',
+  dataType : 'jsonp',
+  success : function(data) {
+      $(".usa-0").text(data.symbol);
+      $(".usa-1").text(data.companyName);
+      $(".usa-2").text('$' + priceRound.round(data.latestPrice, 1));
+      $(".usa-3").text(priceRound.round(data.change, 1));
   },
 });
 
