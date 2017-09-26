@@ -489,19 +489,6 @@ $.ajax({
   },
 });
 
-// $WMT
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/wmt/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".wmt-0").text(data.symbol);
-      $(".wmt-1").text(data.companyName);
-      $(".wmt-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".wmt-3").text(priceRound.round(data.change, 1));
-  },
-});
-
 // $ZNGA
 $.ajax({
   type : 'GET',
