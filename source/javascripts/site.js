@@ -489,6 +489,19 @@ $.ajax({
   },
 });
 
+// $XOM
+$.ajax({
+  type : 'GET',
+  url : 'https://api.iextrading.com/1.0/stock/xom/quote',
+  dataType : 'jsonp',
+  success : function(data) {
+      $(".xom-0").text(data.symbol);
+      $(".xom-1").text(data.companyName);
+      $(".xom-2").text('$' + priceRound.round(data.latestPrice, 1));
+      $(".xom-3").text(priceRound.round(data.change, 1));
+  },
+});
+
 // $ZNGA
 $.ajax({
   type : 'GET',
