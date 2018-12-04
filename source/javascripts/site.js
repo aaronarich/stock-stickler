@@ -8,509 +8,206 @@ priceRound.round = function(number, precision) {
     return roundedTempNumber / factor;
 };
 
-// $ABB
+// Batch process all quotes in a single request
 $.ajax({
   type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/abb/quote',
+  url : 'https://api.iextrading.com/1.0/stock/market/batch?symbols=AA,AAV,ABB,ADM,APC,AAPL,BPT,BRK.B,CHK,CMCSA,CZZ,DVMT,DVN,DXC,FTR,GE,GNW,HLT,HPE,HPQ,INTC,KGC,MSFT,NBR,NOK,NOV,PBA,PFE,PER,SDR,SDT,SNAP,TWTR,TXN,USA,VZ,WIN,XOM,ZNGA&types=quote',
   dataType : 'jsonp',
   success : function(data) {
-      $(".abb-0").text(data.symbol);
-      $(".abb-1").text(data.companyName);
-      $(".abb-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".abb-3").text(priceRound.round(data.change, 1));
-  },
-});
 
-// $ADM
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/adm/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".adm-0").text(data.symbol);
-      $(".adm-1").text(data.companyName);
-      $(".adm-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".adm-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".aa-0").text(data.AA.quote.symbol);
+    $(".aa-1").text(data.AA.quote.companyName);
+    $(".aa-2").text('$' + priceRound.round(data.AA.quote.latestPrice, 1));
+    $(".aa-3").text(priceRound.round(data.AA.quote.change, 1));
 
-// $AAV
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/aav/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".aav-0").text(data.symbol);
-      $(".aav-1").text(data.companyName);
-      $(".aav-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".aav-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".aapl-0").text(data.AAPL.quote.symbol);
+    $(".aapl-1").text(data.AAPL.quote.companyName);
+    $(".aapl-2").text('$' + priceRound.round(data.AAPL.quote.latestPrice, 1));
+    $(".aapl-3").text(priceRound.round(data.AAPL.quote.change, 1));
 
-// $AA
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/aa/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".aa-0").text(data.symbol);
-      $(".aa-1").text(data.companyName);
-      $(".aa-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".aa-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".aav-0").text(data.AAV.quote.symbol);
+    $(".aav-1").text(data.AAV.quote.companyName);
+    $(".aav-2").text('$' + priceRound.round(data.AAV.quote.latestPrice, 1));
+    $(".aav-3").text(priceRound.round(data.AAV.quote.change, 1));
 
-// $APC
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/apc/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".apc-0").text(data.symbol);
-      $(".apc-1").text(data.companyName);
-      $(".apc-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".apc-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".abb-0").text(data.ABB.quote.symbol);
+    $(".abb-1").text(data.ABB.quote.companyName);
+    $(".abb-2").text('$' + priceRound.round(data.ABB.quote.latestPrice, 1));
+    $(".abb-3").text(priceRound.round(data.ABB.quote.change, 1));
 
-// $AAPL
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/aapl/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".aapl-0").text(data.symbol);
-      $(".aapl-1").text(data.companyName);
-      $(".aapl-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".aapl-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".adm-0").text(data.ADM.quote.symbol);
+    $(".adm-1").text(data.ADM.quote.companyName);
+    $(".adm-2").text('$' + priceRound.round(data.ADM.quote.latestPrice, 1));
+    $(".adm-3").text(priceRound.round(data.ADM.quote.change, 1));
 
-// $BPT
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/bpt/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".bpt-0").text(data.symbol);
-      $(".bpt-1").text(data.companyName);
-      $(".bpt-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".bpt-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".apc-0").text(data.APC.quote.symbol);
+    $(".apc-1").text(data.APC.quote.companyName);
+    $(".apc-2").text('$' + priceRound.round(data.APC.quote.latestPrice, 1));
+    $(".apc-3").text(priceRound.round(data.APC.quote.change, 1));
 
-// $BRK.B
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/brk.b/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".brkb-0").text(data.symbol);
-      $(".brkb-1").text(data.companyName);
-      $(".brkb-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".brkb-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".bpt-0").text(data.BPT.quote.symbol);
+    $(".bpt-1").text(data.BPT.quote.companyName);
+    $(".bpt-2").text('$' + priceRound.round(data.BPT.quote.latestPrice, 1));
+    $(".bpt-3").text(priceRound.round(data.BPT.quote.change, 1));
 
-// $CHK
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/chk/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".chk-0").text(data.symbol);
-      $(".chk-1").text(data.companyName);
-      $(".chk-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".chk-3").text(priceRound.round(data.change, 1));
-  },
-});
+    // $(".brkb-0").text(data.BRKB.quote.symbol);
+    // $(".brkb-1").text(data.BRKB.quote.companyName);
+    // $(".brkb-2").text('$' + priceRound.round(data.BRKB.quote.latestPrice, 1));
+    // $(".brkb-3").text(priceRound.round(data.BRKB.quote.change, 1));
 
-// $CMCSA
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/cmcsa/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".cmcsa-0").text(data.symbol);
-      $(".cmcsa-1").text(data.companyName);
-      $(".cmcsa-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".cmcsa-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".chk-0").text(data.CHK.quote.symbol);
+    $(".chk-1").text(data.CHK.quote.companyName);
+    $(".chk-2").text('$' + priceRound.round(data.CHK.quote.latestPrice, 1));
+    $(".chk-3").text(priceRound.round(data.CHK.quote.change, 1));
 
-// $CZZ
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/czz/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".czz-0").text(data.symbol);
-      $(".czz-1").text(data.companyName);
-      $(".czz-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".czz-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".cmcsa-0").text(data.CMCSA.quote.symbol);
+    $(".cmcsa-1").text(data.CMCSA.quote.companyName);
+    $(".cmcsa-2").text('$' + priceRound.round(data.CMCSA.quote.latestPrice, 1));
+    $(".cmcsa-3").text(priceRound.round(data.CMCSA.quote.change, 1));
 
-// $DVMT
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/dvmt/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".dvmt-0").text(data.symbol);
-      $(".dvmt-1").text(data.companyName);
-      $(".dvmt-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".dvmt-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".czz-0").text(data.CZZ.quote.symbol);
+    $(".czz-1").text(data.CZZ.quote.companyName);
+    $(".czz-2").text('$' + priceRound.round(data.CZZ.quote.latestPrice, 1));
+    $(".czz-3").text(priceRound.round(data.CZZ.quote.change, 1));
 
-// $DVN
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/dvn/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".dvn-0").text(data.symbol);
-      $(".dvn-1").text(data.companyName);
-      $(".dvn-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".dvn-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".dvmt-0").text(data.DVMT.quote.symbol);
+    $(".dvmt-1").text(data.DVMT.quote.companyName);
+    $(".dvmt-2").text('$' + priceRound.round(data.DVMT.quote.latestPrice, 1));
+    $(".dvmt-3").text(priceRound.round(data.DVMT.quote.change, 1));
 
-// $DXC
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/dxc/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".dxc-0").text(data.symbol);
-      $(".dxc-1").text(data.companyName);
-      $(".dxc-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".dxc-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".dvn-0").text(data.DVN.quote.symbol);
+    $(".dvn-1").text(data.DVN.quote.companyName);
+    $(".dvn-2").text('$' + priceRound.round(data.DVN.quote.latestPrice, 1));
+    $(".dvn-3").text(priceRound.round(data.DVN.quote.change, 1));
 
-// $FTR
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/ftr/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".ftr-0").text(data.symbol);
-      $(".ftr-1").text(data.companyName);
-      $(".ftr-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".ftr-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".dxc-0").text(data.DXC.quote.symbol);
+    $(".dxc-1").text(data.DXC.quote.companyName);
+    $(".dxc-2").text('$' + priceRound.round(data.DXC.quote.latestPrice, 1));
+    $(".dxc-3").text(priceRound.round(data.DXC.quote.change, 1));
 
-// $GE
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/ge/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".ge-0").text(data.symbol);
-      $(".ge-1").text(data.companyName);
-      $(".ge-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".ge-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".ftr-0").text(data.FTR.quote.symbol);
+    $(".ftr-1").text(data.FTR.quote.companyName);
+    $(".ftr-2").text('$' + priceRound.round(data.FTR.quote.latestPrice, 1));
+    $(".ftr-3").text(priceRound.round(data.FTR.quote.change, 1));
 
-// $GNW
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/gnw/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".gnw-0").text(data.symbol);
-      $(".gnw-1").text(data.companyName);
-      $(".gnw-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".gnw-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".ge-0").text(data.GE.quote.symbol);
+    $(".ge-1").text(data.GE.quote.companyName);
+    $(".ge-2").text('$' + priceRound.round(data.GE.quote.latestPrice, 1));
+    $(".ge-3").text(priceRound.round(data.GE.quote.change, 1));
 
-// $HLT
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/hlt/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".hlt-0").text(data.symbol);
-      $(".hlt-1").text(data.companyName);
-      $(".hlt-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".hlt-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".gnw-0").text(data.GNW.quote.symbol);
+    $(".gnw-1").text(data.GNW.quote.companyName);
+    $(".gnw-2").text('$' + priceRound.round(data.GNW.quote.latestPrice, 1));
+    $(".gnw-3").text(priceRound.round(data.GNW.quote.change, 1));
 
-// $HPE
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/hpe/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".hpe-0").text(data.symbol);
-      $(".hpe-1").text(data.companyName);
-      $(".hpe-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".hpe-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".hlt-0").text(data.HLT.quote.symbol);
+    $(".hlt-1").text(data.HLT.quote.companyName);
+    $(".hlt-2").text('$' + priceRound.round(data.HLT.quote.latestPrice, 1));
+    $(".hlt-3").text(priceRound.round(data.HLT.quote.change, 1));
 
-// $HPQ
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/hpq/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".hpq-0").text(data.symbol);
-      $(".hpq-1").text(data.companyName);
-      $(".hpq-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".hpq-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".hpe-0").text(data.HPE.quote.symbol);
+    $(".hpe-1").text(data.HPE.quote.companyName);
+    $(".hpe-2").text('$' + priceRound.round(data.HPE.quote.latestPrice, 1));
+    $(".hpe-3").text(priceRound.round(data.HPE.quote.change, 1));
 
-// $INTC
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/intc/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".intc-0").text(data.symbol);
-      $(".intc-1").text(data.companyName);
-      $(".intc-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".intc-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".hpq-0").text(data.HPQ.quote.symbol);
+    $(".hpq-1").text(data.HPQ.quote.companyName);
+    $(".hpq-2").text('$' + priceRound.round(data.HPQ.quote.latestPrice, 1));
+    $(".hpq-3").text(priceRound.round(data.HPQ.quote.change, 1));
 
-// $KGC
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/kgc/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".kgc-0").text(data.symbol);
-      $(".kgc-1").text(data.companyName);
-      $(".kgc-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".kgc-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".intc-0").text(data.INTC.quote.symbol);
+    $(".intc-1").text(data.INTC.quote.companyName);
+    $(".intc-2").text('$' + priceRound.round(data.INTC.quote.latestPrice, 1));
+    $(".intc-3").text(priceRound.round(data.INTC.quote.change, 1));
 
-// $MSFT
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/msft/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".msft-0").text(data.symbol);
-      $(".msft-1").text(data.companyName);
-      $(".msft-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".msft-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".kgc-0").text(data.KGC.quote.symbol);
+    $(".kgc-1").text(data.KGC.quote.companyName);
+    $(".kgc-2").text('$' + priceRound.round(data.KGC.quote.latestPrice, 1));
+    $(".kgc-3").text(priceRound.round(data.KGC.quote.change, 1));
 
-// $NBR
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/nbr/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".nbr-0").text(data.symbol);
-      $(".nbr-1").text(data.companyName);
-      $(".nbr-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".nbr-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".msft-0").text(data.MSFT.quote.symbol);
+    $(".msft-1").text(data.MSFT.quote.companyName);
+    $(".msft-2").text('$' + priceRound.round(data.MSFT.quote.latestPrice, 1));
+    $(".msft-3").text(priceRound.round(data.MSFT.quote.change, 1));
 
-// $NOV
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/nov/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".nov-0").text(data.symbol);
-      $(".nov-1").text(data.companyName);
-      $(".nov-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".nov-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".nbr-0").text(data.NBR.quote.symbol);
+    $(".nbr-1").text(data.NBR.quote.companyName);
+    $(".nbr-2").text('$' + priceRound.round(data.NBR.quote.latestPrice, 1));
+    $(".nbr-3").text(priceRound.round(data.NBR.quote.change, 1));
 
-// $NOK
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/nok/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".nok-0").text(data.symbol);
-      $(".nok-1").text(data.companyName);
-      $(".nok-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".nok-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".nok-0").text(data.NOK.quote.symbol);
+    $(".nok-1").text(data.NOK.quote.companyName);
+    $(".nok-2").text('$' + priceRound.round(data.NOK.quote.latestPrice, 1));
+    $(".nok-3").text(priceRound.round(data.NOK.quote.change, 1));
 
-// $PBA
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/pba/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".pba-0").text(data.symbol);
-      $(".pba-1").text(data.companyName);
-      $(".pba-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".pba-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".nov-0").text(data.NOV.quote.symbol);
+    $(".nov-1").text(data.NOV.quote.companyName);
+    $(".nov-2").text('$' + priceRound.round(data.NOV.quote.latestPrice, 1));
+    $(".nov-3").text(priceRound.round(data.NOV.quote.change, 1));
 
-// $PFE
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/pfe/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".pfe-0").text(data.symbol);
-      $(".pfe-1").text(data.companyName);
-      $(".pfe-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".pfe-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".pba-0").text(data.PBA.quote.symbol);
+    $(".pba-1").text(data.PBA.quote.companyName);
+    $(".pba-2").text('$' + priceRound.round(data.PBA.quote.latestPrice, 1));
+    $(".pba-3").text(priceRound.round(data.PBA.quote.change, 1));
 
-// $SDR
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/sdr/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".sdr-0").text(data.symbol);
-      $(".sdr-1").text(data.companyName);
-      $(".sdr-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".sdr-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".per-0").text(data.PER.quote.symbol);
+    $(".per-1").text(data.PER.quote.companyName);
+    $(".per-2").text('$' + priceRound.round(data.PER.quote.latestPrice, 1));
+    $(".per-3").text(priceRound.round(data.PER.quote.change, 1));
 
-// $SDT
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/sdt/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".sdt-0").text(data.symbol);
-      $(".sdt-1").text(data.companyName);
-      $(".sdt-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".sdt-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".pfe-0").text(data.PFE.quote.symbol);
+    $(".pfe-1").text(data.PFE.quote.companyName);
+    $(".pfe-2").text('$' + priceRound.round(data.PFE.quote.latestPrice, 1));
+    $(".pfe-3").text(priceRound.round(data.PFE.quote.change, 1));
 
-// $PER
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/per/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".per-0").text(data.symbol);
-      $(".per-1").text(data.companyName);
-      $(".per-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".per-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".sdr-0").text(data.SDR.quote.symbol);
+    $(".sdr-1").text(data.SDR.quote.companyName);
+    $(".sdr-2").text('$' + priceRound.round(data.SDR.quote.latestPrice, 1));
+    $(".sdr-3").text(priceRound.round(data.SDR.quote.change, 1));
 
-// $SNAP
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/snap/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".snap-0").text(data.symbol);
-      $(".snap-1").text(data.companyName);
-      $(".snap-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".snap-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".sdt-0").text(data.SDT.quote.symbol);
+    $(".sdt-1").text(data.SDT.quote.companyName);
+    $(".sdt-2").text('$' + priceRound.round(data.SDT.quote.latestPrice, 1));
+    $(".sdt-3").text(priceRound.round(data.SDT.quote.change, 1));
 
-// $TWTR
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/twtr/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".twtr-0").text(data.symbol);
-      $(".twtr-1").text(data.companyName);
-      $(".twtr-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".twtr-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".snap-0").text(data.SNAP.quote.symbol);
+    $(".snap-1").text(data.SNAP.quote.companyName);
+    $(".snap-2").text('$' + priceRound.round(data.SNAP.quote.latestPrice, 1));
+    $(".snap-3").text(priceRound.round(data.SNAP.quote.change, 1));
 
-// $TXN
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/txn/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".txn-0").text(data.symbol);
-      $(".txn-1").text(data.companyName);
-      $(".txn-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".txn-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".twtr-0").text(data.TWTR.quote.symbol);
+    $(".twtr-1").text(data.TWTR.quote.companyName);
+    $(".twtr-2").text('$' + priceRound.round(data.TWTR.quote.latestPrice, 1));
+    $(".twtr-3").text(priceRound.round(data.TWTR.quote.change, 1));
 
-// $USA
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/usa/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".usa-0").text(data.symbol);
-      $(".usa-1").text(data.companyName);
-      $(".usa-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".usa-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".txn-0").text(data.TXN.quote.symbol);
+    $(".txn-1").text(data.TXN.quote.companyName);
+    $(".txn-2").text('$' + priceRound.round(data.TXN.quote.latestPrice, 1));
+    $(".txn-3").text(priceRound.round(data.TXN.quote.change, 1));
 
-// $VZ
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/vz/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".vz-0").text(data.symbol);
-      $(".vz-1").text(data.companyName);
-      $(".vz-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".vz-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".usa-0").text(data.USA.quote.symbol);
+    $(".usa-1").text(data.USA.quote.companyName);
+    $(".usa-2").text('$' + priceRound.round(data.USA.quote.latestPrice, 1));
+    $(".usa-3").text(priceRound.round(data.USA.quote.change, 1));
 
-// $WIN
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/win/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".win-0").text(data.symbol);
-      $(".win-1").text(data.companyName);
-      $(".win-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".win-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".vz-0").text(data.VZ.quote.symbol);
+    $(".vz-1").text(data.VZ.quote.companyName);
+    $(".vz-2").text('$' + priceRound.round(data.VZ.quote.latestPrice, 1));
+    $(".vz-3").text(priceRound.round(data.VZ.quote.change, 1));
 
-// $XOM
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/xom/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".xom-0").text(data.symbol);
-      $(".xom-1").text(data.companyName);
-      $(".xom-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".xom-3").text(priceRound.round(data.change, 1));
-  },
-});
+    $(".win-0").text(data.WIN.quote.symbol);
+    $(".win-1").text(data.WIN.quote.companyName);
+    $(".win-2").text('$' + priceRound.round(data.WIN.quote.latestPrice, 1));
+    $(".win-3").text(priceRound.round(data.WIN.quote.change, 1));
 
-// $ZNGA
-$.ajax({
-  type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/znga/quote',
-  dataType : 'jsonp',
-  success : function(data) {
-      $(".znga-0").text(data.symbol);
-      $(".znga-1").text(data.companyName);
-      $(".znga-2").text('$' + priceRound.round(data.latestPrice, 1));
-      $(".znga-3").text(priceRound.round(data.change, 1));
+    $(".xom-0").text(data.XOM.quote.symbol);
+    $(".xom-1").text(data.XOM.quote.companyName);
+    $(".xom-2").text('$' + priceRound.round(data.XOM.quote.latestPrice, 1));
+    $(".xom-3").text(priceRound.round(data.XOM.quote.change, 1));
+
+    $(".znga-0").text(data.ZNGA.quote.symbol);
+    $(".znga-1").text(data.ZNGA.quote.companyName);
+    $(".znga-2").text('$' + priceRound.round(data.ZNGA.quote.latestPrice, 1));
+    $(".znga-3").text(priceRound.round(data.ZNGA.quote.change, 1));
   },
 });
