@@ -11,7 +11,7 @@ priceRound.round = function(number, precision) {
 // Batch process all quotes in a single request
 $.ajax({
   type : 'GET',
-  url : 'https://api.iextrading.com/1.0/stock/market/batch?symbols=AA,AAV,ABB,ADM,APC,AAPL,BPT,BRK.B,CHK,CMCSA,CZZ,DVMT,DVN,DXC,FTR,GE,GNW,HLT,HPE,HPQ,INTC,KGC,MSFT,NBR,NOK,NOV,PBA,PFE,PER,SDR,SDT,SNAP,TWTR,TXN,USA,VZ,WIN,XOM,ZNGA&types=quote',
+  url : 'https://cloud.iexapis.com/stable/stock/market/batch?symbols=AA,ABB,ADM,APC,AAPL,BPT,BRK.B,CHK,CMCSA,CZZ,DVMT,DVN,DXC,FTR,GE,GNW,HLT,HPE,HPQ,INTC,KGC,MSFT,NBR,NOK,NOV,PBA,PFE,PER,SDR,SDT,SNAP,TWTR,TXN,USA,VZ,WIN,XOM,ZNGA&types=quote&token=API_KEY_HERE',
   dataType : 'jsonp',
   success : function(data) {
 
@@ -25,10 +25,10 @@ $.ajax({
     $(".aapl-2").text('$' + priceRound.round(data.AAPL.quote.latestPrice, 1));
     $(".aapl-3").text(priceRound.round(data.AAPL.quote.change, 1));
 
-    $(".aav-0").text(data.AAV.quote.symbol);
-    $(".aav-1").text(data.AAV.quote.companyName);
-    $(".aav-2").text('$' + priceRound.round(data.AAV.quote.latestPrice, 1));
-    $(".aav-3").text(priceRound.round(data.AAV.quote.change, 1));
+    // $(".aav-0").text(data.AAV.quote.symbol);
+    // $(".aav-1").text(data.AAV.quote.companyName);
+    // $(".aav-2").text('$' + priceRound.round(data.AAV.quote.latestPrice, 1));
+    // $(".aav-3").text(priceRound.round(data.AAV.quote.change, 1));
 
     $(".abb-0").text(data.ABB.quote.symbol);
     $(".abb-1").text(data.ABB.quote.companyName);
@@ -50,10 +50,10 @@ $.ajax({
     $(".bpt-2").text('$' + priceRound.round(data.BPT.quote.latestPrice, 1));
     $(".bpt-3").text(priceRound.round(data.BPT.quote.change, 1));
 
-    // $(".brkb-0").text(data.BRKB.quote.symbol);
-    // $(".brkb-1").text(data.BRKB.quote.companyName);
-    // $(".brkb-2").text('$' + priceRound.round(data.BRKB.quote.latestPrice, 1));
-    // $(".brkb-3").text(priceRound.round(data.BRKB.quote.change, 1));
+    $(".brkb-0").text(data["BRK.B"].quote.symbol);
+    $(".brkb-1").text(data["BRK.B"].quote.companyName);
+    $(".brkb-2").text('$' + priceRound.round(data["BRK.B"].quote.latestPrice, 1));
+    $(".brkb-3").text(priceRound.round(data["BRK.B"].quote.change, 1));
 
     $(".chk-0").text(data.CHK.quote.symbol);
     $(".chk-1").text(data.CHK.quote.companyName);
@@ -70,10 +70,10 @@ $.ajax({
     $(".czz-2").text('$' + priceRound.round(data.CZZ.quote.latestPrice, 1));
     $(".czz-3").text(priceRound.round(data.CZZ.quote.change, 1));
 
-    $(".dvmt-0").text(data.DVMT.quote.symbol);
-    $(".dvmt-1").text(data.DVMT.quote.companyName);
-    $(".dvmt-2").text('$' + priceRound.round(data.DVMT.quote.latestPrice, 1));
-    $(".dvmt-3").text(priceRound.round(data.DVMT.quote.change, 1));
+    // $(".dvmt-0").text(data.DVMT.quote.symbol);
+    // $(".dvmt-1").text(data.DVMT.quote.companyName);
+    // $(".dvmt-2").text('$' + priceRound.round(data.DVMT.quote.latestPrice, 1));
+    // $(".dvmt-3").text(priceRound.round(data.DVMT.quote.change, 1));
 
     $(".dvn-0").text(data.DVN.quote.symbol);
     $(".dvn-1").text(data.DVN.quote.companyName);
