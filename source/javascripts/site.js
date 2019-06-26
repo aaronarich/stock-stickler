@@ -11,7 +11,7 @@ priceRound.round = function(number, precision) {
 // Batch process all quotes in a single request
 $.ajax({
   type : 'GET',
-  url : 'https://cloud.iexapis.com/stable/stock/market/batch?symbols=AA,ABB,ADM,APC,AAPL,BPT,BRK.B,CHK,CMCSA,CZZ,DVMT,DVN,DXC,FTR,GE,GNW,HLT,HPE,HPQ,INTC,KGC,MSFT,NBR,NOK,NOV,PBA,PFE,PER,SDR,SDT,SNAP,TWTR,TXN,USA,VZ,WIN,XOM,ZNGA&types=quote&token=API_KEY_HERE',
+  url : window.iexAPI,
   dataType : 'jsonp',
   success : function(data) {
 
